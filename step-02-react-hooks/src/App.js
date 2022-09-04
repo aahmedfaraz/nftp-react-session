@@ -1,10 +1,17 @@
 import './App.css';
+import Form from './components/form/Form';
+import Todo from './components/todo/Todo';
+import {useState} from 'react';
 
 function App() {
+  const [todoTasks, setTodoTasks] = useState([]);
+
   return (
-    <div>
-      <h1>Hooks</h1>
-    </div>
+    <>
+      <h1>Todo App</h1>
+      <Form todoTasks={todoTasks} setTodoTasks={setTodoTasks}/>
+      <Todo todoTasks={todoTasks} setTodoTasks={setTodoTasks}/>
+    </>
   );
 }
 
